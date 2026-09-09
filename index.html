@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YOUR NAME — Portfolio</title>
-<meta name="description" content="Personal portfolio of YOUR NAME — university student exploring technology, design and creative problem solving.">
+<title>YOUR NAME — 個人作品集</title>
+<meta name="description" content="YOUR NAME 的個人作品集——探索科技、設計與創意解決問題的學習歷程。">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{sans:['Inter','Noto Sans TC','Noto Sans','system-ui','sans-serif']},animation:{'fade-up':'fadeUp .8s ease-out forwards',float:'float 4s ease-in-out infinite'},keyframes:{fadeUp:{'0%':{opacity:'0',transform:'translateY(20px)'},'100%':{opacity:'1',transform:'translateY(0)'}},float:{'0%,100%':{transform:'translateY(0)'},'50%':{transform:'translateY(-8px)'}}}}}};
@@ -16,19 +16,19 @@ tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{sans:['Inter','Noto
 <style>
 html{scroll-behavior:smooth}
 body{font-family:'Inter','Noto Sans TC','Noto Sans',system-ui,sans-serif}
-::selection{background:#bfdbfe;color:#172033}
-.dark ::selection{background:#1e40af;color:#dbeafe}
+::selection{background:#d9e9f8;color:#172033}
+.dark ::selection{background:#4f7fae;color:#f1f7fc}
 .nav-blur{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
 .project-card{transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
 .project-card:hover{transform:translateY(-5px)}
-.timeline-line{background:linear-gradient(to bottom,#2563eb,#bfdbfe,transparent)}
-.dark .timeline-line{background:linear-gradient(to bottom,#60a5fa,#1e3a8a,transparent)}
-.gradient-text{background:linear-gradient(90deg,#1d4ed8,#3b82f6);-webkit-background-clip:text;background-clip:text;color:transparent}
-.dark .gradient-text{background:linear-gradient(90deg,#93c5fd,#60a5fa);-webkit-background-clip:text;background-clip:text;color:transparent}
+.timeline-line{background:linear-gradient(to bottom,#6fa8dc,#d9e9f8,transparent)}
+.dark .timeline-line{background:linear-gradient(to bottom,#6fa8dc,#315b82,transparent)}
+.gradient-text{background:linear-gradient(90deg,#568fca,#6fa8dc);-webkit-background-clip:text;background-clip:text;color:transparent}
+.dark .gradient-text{background:linear-gradient(90deg,#a9cfee,#6fa8dc);-webkit-background-clip:text;background-clip:text;color:transparent}
 .skill-tag{display:inline-block;padding:.45rem .75rem;border-radius:.5rem;background:#e2e8f0;color:#475569;font-size:.75rem;font-weight:600}
 .dark .skill-tag{background:#1e293b;color:#cbd5e1}
-.tech-tag{display:inline-block;padding:.4rem .7rem;border-radius:.45rem;background:#dbeafe;color:#1d4ed8;font-size:.7rem;font-weight:700}
-.dark .tech-tag{background:#172554;color:#93c5fd}
+.tech-tag{display:inline-block;padding:.4rem .7rem;border-radius:.45rem;background:#e2eef9;color:#568fca;font-size:.7rem;font-weight:700}
+.dark .tech-tag{background:#1d3449;color:#a9cfee}
 .mobile-link{color:#475569;font-size:.95rem}
 .dark .mobile-link{color:#94a3b8}
 </style>
@@ -36,62 +36,62 @@ body{font-family:'Inter','Noto Sans TC','Noto Sans',system-ui,sans-serif}
 
 <body class="bg-slate-100 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
 
-<!-- NAV -->
+<!-- 導覽列 -->
 <nav class="fixed top-0 left-0 right-0 z-50 border-b border-slate-300/70 dark:border-slate-800/70 bg-slate-100/80 dark:bg-slate-950/80 nav-blur">
 <div class="max-w-6xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
-<a href="#home" class="text-lg font-bold tracking-tight hover:text-blue-700 dark:hover:text-blue-400 transition">YOUR NAME<span class="text-blue-600 dark:text-blue-400">.</span></a>
+<a href="#home" class="text-lg font-bold tracking-tight hover:text-[#6fa8dc] transition">YOUR NAME<span class="text-[#6fa8dc]">.</span></a>
 <div class="hidden md:flex items-center gap-8">
-<a href="#about" class="text-sm text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-400 transition">About</a>
-<a href="#skills" class="text-sm text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-400 transition">Skills</a>
-<a href="#projects" class="text-sm text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-400 transition">Projects</a>
-<a href="#experience" class="text-sm text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-400 transition">Experience</a>
-<a href="#journey" class="text-sm text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-400 transition">Journey</a>
-<a href="#contact" class="text-sm text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-400 transition">Contact</a>
-<button id="themeToggle" aria-label="Toggle dark mode" class="w-9 h-9 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-800 transition"><span id="themeIcon">☾</span></button>
+<a href="#about" class="text-sm text-slate-600 dark:text-slate-400 hover:text-[#6fa8dc] transition">關於我</a>
+<a href="#skills" class="text-sm text-slate-600 dark:text-slate-400 hover:text-[#6fa8dc] transition">技能</a>
+<a href="#projects" class="text-sm text-slate-600 dark:text-slate-400 hover:text-[#6fa8dc] transition">作品</a>
+<a href="#experience" class="text-sm text-slate-600 dark:text-slate-400 hover:text-[#6fa8dc] transition">經歷</a>
+<a href="#journey" class="text-sm text-slate-600 dark:text-slate-400 hover:text-[#6fa8dc] transition">學習歷程</a>
+<a href="#contact" class="text-sm text-slate-600 dark:text-slate-400 hover:text-[#6fa8dc] transition">聯絡我</a>
+<button id="themeToggle" aria-label="切換深色模式" class="w-9 h-9 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-800 transition"><span id="themeIcon">☾</span></button>
 </div>
-<button id="mobileMenuButton" class="md:hidden text-slate-700 dark:text-slate-300 text-2xl" aria-label="Open menu">☰</button>
+<button id="mobileMenuButton" class="md:hidden text-slate-700 dark:text-slate-300 text-2xl" aria-label="開啟選單">☰</button>
 </div>
 <div id="mobileMenu" class="hidden md:hidden border-t border-slate-300 dark:border-slate-800 px-6 py-5 bg-slate-100 dark:bg-slate-950">
 <div class="flex flex-col gap-5">
-<a href="#about" class="mobile-link">About</a>
-<a href="#skills" class="mobile-link">Skills</a>
-<a href="#projects" class="mobile-link">Projects</a>
-<a href="#experience" class="mobile-link">Experience</a>
-<a href="#journey" class="mobile-link">Journey</a>
-<a href="#contact" class="mobile-link">Contact</a>
-<button id="mobileThemeToggle" class="text-left text-slate-600 dark:text-slate-400">☾ Toggle dark mode</button>
+<a href="#about" class="mobile-link">關於我</a>
+<a href="#skills" class="mobile-link">技能</a>
+<a href="#projects" class="mobile-link">作品</a>
+<a href="#experience" class="mobile-link">經歷</a>
+<a href="#journey" class="mobile-link">學習歷程</a>
+<a href="#contact" class="mobile-link">聯絡我</a>
+<button id="mobileThemeToggle" class="text-left text-slate-600 dark:text-slate-400">☾ 切換深色模式</button>
 </div>
 </div>
 </nav>
 
-<!-- HERO -->
+<!-- 首頁 -->
 <header id="home" class="min-h-screen flex items-center pt-20">
 <div class="max-w-6xl mx-auto px-6 lg:px-8 w-full">
 <div class="grid lg:grid-cols-[1.3fr_0.7fr] gap-16 items-center">
 <div class="animate-fade-up">
-<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 text-sm font-medium mb-7">
-<span class="w-2 h-2 rounded-full bg-blue-500"></span>University Student · 2026 — Present
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#e8f2fb] dark:bg-[#172b3d] text-[#568fca] dark:text-[#a9cfee] text-sm font-medium mb-7">
+<span class="w-2 h-2 rounded-full bg-[#6fa8dc]"></span>大學生 · 2026 — 至今
 </div>
 <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] mb-7">
-Learning.<br><span class="gradient-text">Building.</span><br>Evolving.
+學習。<br><span class="gradient-text">實踐。</span><br>持續成長。
 </h1>
 <p class="text-lg lg:text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed mb-9">
-Hi, I'm <strong class="text-slate-900 dark:text-slate-100">YOUR NAME</strong>.
-I'm a university student interested in technology, design, and creative problem solving.
-This portfolio documents my journey from freshman to future professional.
+嗨，我是 <strong class="text-slate-900 dark:text-slate-100">YOUR NAME</strong>。
+我是一名對科技、設計與創意解決問題感興趣的大學生。
+這份作品集記錄了我從大一一路走向未來職涯的學習歷程。
 </p>
 <div class="flex flex-wrap gap-4">
-<a href="#projects" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition">View Projects<span class="ml-2">↓</span></a>
-<a href="resume.pdf" target="_blank" class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-slate-300 dark:border-slate-700 font-semibold hover:border-blue-500 hover:text-blue-700 dark:hover:text-blue-400 transition">View Resume</a>
+<a href="#projects" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#6fa8dc] text-white font-semibold hover:bg-[#568fca] transition">查看作品<span class="ml-2">↓</span></a>
+<a href="resume.pdf" target="_blank" class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-slate-300 dark:border-slate-700 font-semibold hover:border-[#6fa8dc] hover:text-[#568fca] dark:hover:text-[#a9cfee] transition">查看履歷</a>
 </div>
 </div>
 
 <div class="hidden lg:flex justify-center">
-<div class="w-64 h-64 rounded-full bg-blue-100 dark:bg-blue-950 flex items-center justify-center animate-float">
-<div class="w-52 h-52 rounded-full border border-blue-200 dark:border-blue-800 flex items-center justify-center text-center p-8">
+<div class="w-64 h-64 rounded-full bg-[#dcecf9] dark:bg-[#172b3d] flex items-center justify-center animate-float">
+<div class="w-52 h-52 rounded-full border border-[#b8d5ed] dark:border-[#315b82] flex items-center justify-center text-center p-8">
 <div>
 <div class="text-5xl mb-3">✦</div>
-<p class="text-sm text-blue-700 dark:text-blue-300 font-semibold">Curious mind.<br>Creative builder.</p>
+<p class="text-sm text-[#568fca] dark:text-[#a9cfee] font-semibold">保持好奇。<br>持續創作。</p>
 </div>
 </div>
 </div>
@@ -100,56 +100,56 @@ This portfolio documents my journey from freshman to future professional.
 </div>
 </header>
 
-<!-- ABOUT -->
+<!-- 關於我 -->
 <section id="about" class="py-28 border-t border-slate-300 dark:border-slate-800">
 <div class="max-w-6xl mx-auto px-6 lg:px-8">
 <div class="grid lg:grid-cols-3 gap-12">
 <div>
-<p class="text-sm font-semibold tracking-widest uppercase text-blue-600 dark:text-blue-400 mb-3">About Me</p>
-<h2 class="text-3xl lg:text-4xl font-bold tracking-tight">A little<br>about me.</h2>
+<p class="text-sm font-semibold tracking-widest uppercase text-[#568fca] dark:text-[#a9cfee] mb-3">關於我</p>
+<h2 class="text-3xl lg:text-4xl font-bold tracking-tight">關於<br>我的一些事。</h2>
 </div>
 <div class="lg:col-span-2 grid sm:grid-cols-2 gap-10">
 <div>
-<p class="text-slate-600 dark:text-slate-400 leading-8">I'm currently studying at <strong class="text-slate-900 dark:text-slate-100">YOUR UNIVERSITY</strong>, where I'm exploring the intersection of technology and creativity.</p>
-<p class="text-slate-600 dark:text-slate-400 leading-8 mt-5">I enjoy learning new tools, turning ideas into practical projects, and continuously improving through experimentation.</p>
+<p class="text-slate-600 dark:text-slate-400 leading-8">我目前就讀於 <strong class="text-slate-900 dark:text-slate-100">YOUR UNIVERSITY</strong>，正在探索科技與創意之間的交集。</p>
+<p class="text-slate-600 dark:text-slate-400 leading-8 mt-5">我喜歡學習新的工具，將想法轉化為實際作品，也透過不斷嘗試與實驗持續進步。</p>
 </div>
 <div class="border-l border-slate-300 dark:border-slate-800 pl-7">
-<div class="mb-6"><p class="text-xs uppercase tracking-wider text-slate-500 mb-1">Education</p><p class="font-semibold">YOUR UNIVERSITY</p><p class="text-sm text-slate-500 mt-1">YOUR DEPARTMENT</p></div>
-<div class="mb-6"><p class="text-xs uppercase tracking-wider text-slate-500 mb-1">Based in</p><p class="font-semibold">Taiwan</p></div>
-<div><p class="text-xs uppercase tracking-wider text-slate-500 mb-1">Currently</p><p class="font-semibold">Freshman · 2026</p></div>
+<div class="mb-6"><p class="text-xs uppercase tracking-wider text-slate-500 mb-1">教育背景</p><p class="font-semibold">YOUR UNIVERSITY</p><p class="text-sm text-slate-500 mt-1">YOUR DEPARTMENT</p></div>
+<div class="mb-6"><p class="text-xs uppercase tracking-wider text-slate-500 mb-1">所在地</p><p class="font-semibold">台灣</p></div>
+<div><p class="text-xs uppercase tracking-wider text-slate-500 mb-1">目前身分</p><p class="font-semibold">大一 · 2026</p></div>
 </div>
 </div>
 </div>
 </div>
 </section>
 
-<!-- SKILLS -->
+<!-- 技能 -->
 <section id="skills" class="py-28 bg-slate-200/70 dark:bg-slate-900/40 border-y border-slate-300 dark:border-slate-800">
 <div class="max-w-6xl mx-auto px-6 lg:px-8">
 <div class="mb-14">
-<p class="text-sm font-semibold tracking-widest uppercase text-blue-600 dark:text-blue-400 mb-3">Skills</p>
-<h2 class="text-3xl lg:text-4xl font-bold">What I work with.</h2>
+<p class="text-sm font-semibold tracking-widest uppercase text-[#568fca] dark:text-[#a9cfee] mb-3">技能</p>
+<h2 class="text-3xl lg:text-4xl font-bold">我會使用的工具。</h2>
 </div>
 <div class="grid md:grid-cols-3 gap-6">
 
 <div class="p-7 rounded-2xl border border-slate-300 dark:border-slate-800 bg-slate-100 dark:bg-slate-900">
-<div class="text-2xl mb-5">⌘</div><h3 class="text-xl font-bold mb-4">Development</h3>
+<div class="text-2xl mb-5">⌘</div><h3 class="text-xl font-bold mb-4">程式開發</h3>
 <div class="flex flex-wrap gap-2">
 <span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Tailwind CSS</span><span class="skill-tag">React</span><span class="skill-tag">Git</span><span class="skill-tag">GitHub</span>
 </div>
 </div>
 
 <div class="p-7 rounded-2xl border border-slate-300 dark:border-slate-800 bg-slate-100 dark:bg-slate-900">
-<div class="text-2xl mb-5">✎</div><h3 class="text-xl font-bold mb-4">Design</h3>
+<div class="text-2xl mb-5">✎</div><h3 class="text-xl font-bold mb-4">設計</h3>
 <div class="flex flex-wrap gap-2">
-<span class="skill-tag">Figma</span><span class="skill-tag">UI Design</span><span class="skill-tag">UX</span><span class="skill-tag">Typography</span><span class="skill-tag">Visual Design</span>
+<span class="skill-tag">Figma</span><span class="skill-tag">UI 設計</span><span class="skill-tag">UX</span><span class="skill-tag">字體設計</span><span class="skill-tag">視覺設計</span>
 </div>
 </div>
 
 <div class="p-7 rounded-2xl border border-slate-300 dark:border-slate-800 bg-slate-100 dark:bg-slate-900">
-<div class="text-2xl mb-5">✦</div><h3 class="text-xl font-bold mb-4">Other</h3>
+<div class="text-2xl mb-5">✦</div><h3 class="text-xl font-bold mb-4">其他能力</h3>
 <div class="flex flex-wrap gap-2">
-<span class="skill-tag">AI Tools</span><span class="skill-tag">Problem Solving</span><span class="skill-tag">Research</span><span class="skill-tag">Presentation</span><span class="skill-tag">Teamwork</span>
+<span class="skill-tag">AI 工具</span><span class="skill-tag">問題解決</span><span class="skill-tag">研究</span><span class="skill-tag">簡報</span><span class="skill-tag">團隊合作</span>
 </div>
 </div>
 
@@ -157,90 +157,90 @@ This portfolio documents my journey from freshman to future professional.
 </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- 作品 -->
 <section id="projects" class="py-28">
 <div class="max-w-6xl mx-auto px-6 lg:px-8">
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
 <div>
-<p class="text-sm font-semibold tracking-widest uppercase text-blue-600 dark:text-blue-400 mb-3">Selected Work</p>
-<h2 class="text-3xl lg:text-4xl font-bold">Projects.</h2>
+<p class="text-sm font-semibold tracking-widest uppercase text-[#568fca] dark:text-[#a9cfee] mb-3">精選作品</p>
+<h2 class="text-3xl lg:text-4xl font-bold">作品集。</h2>
 </div>
-<p class="max-w-md text-slate-500 dark:text-slate-400">A collection of projects that reflect my learning, experimentation, and growth.</p>
+<p class="max-w-md text-slate-500 dark:text-slate-400">這裡收錄了能展現我的學習、嘗試與成長的作品。</p>
 </div>
 
 <div class="grid md:grid-cols-2 gap-6">
 
 <article class="project-card p-8 rounded-2xl border border-slate-300 dark:border-slate-800 bg-slate-50 dark:bg-slate-900">
-<div class="flex justify-between items-start mb-8"><span class="text-xs font-semibold tracking-widest text-blue-600 dark:text-blue-400">PROJECT 01</span><span class="text-slate-400">↗</span></div>
+<div class="flex justify-between items-start mb-8"><span class="text-xs font-semibold tracking-widest text-[#568fca] dark:text-[#a9cfee]">作品 01</span><span class="text-slate-400">↗</span></div>
 <h3 class="text-2xl font-bold mb-4">AI 智慧學習助手</h3>
 <p class="text-slate-600 dark:text-slate-400 leading-7 mb-7">使用前端技術與 AI API 打造智慧問答介面，嘗試將人工智慧融入日常學習流程。</p>
 <div class="flex flex-wrap gap-2 mb-7"><span class="tech-tag">HTML</span><span class="tech-tag">Tailwind</span><span class="tech-tag">JavaScript</span><span class="tech-tag">API</span></div>
 <div class="flex gap-5 text-sm font-semibold">
-<a href="https://github.com/YOUR-USERNAME" target="_blank" class="hover:text-blue-700 dark:hover:text-blue-400 transition">GitHub →</a>
-<a href="#" target="_blank" class="text-slate-500 hover:text-blue-700 dark:hover:text-blue-400 transition">Live Demo →</a>
+<a href="https://github.com/YOUR-USERNAME" target="_blank" class="hover:text-[#568fca] dark:hover:text-[#a9cfee] transition">GitHub →</a>
+<a href="#" target="_blank" class="text-slate-500 hover:text-[#568fca] dark:hover:text-[#a9cfee] transition">作品展示 →</a>
 </div>
 </article>
 
 <article class="project-card p-8 rounded-2xl border border-slate-300 dark:border-slate-800 bg-slate-50 dark:bg-slate-900">
-<div class="flex justify-between items-start mb-8"><span class="text-xs font-semibold tracking-widest text-blue-600 dark:text-blue-400">PROJECT 02</span><span class="text-slate-400">↗</span></div>
+<div class="flex justify-between items-start mb-8"><span class="text-xs font-semibold tracking-widest text-[#568fca] dark:text-[#a9cfee]">作品 02</span><span class="text-slate-400">↗</span></div>
 <h3 class="text-2xl font-bold mb-4">個人部落格</h3>
 <p class="text-slate-600 dark:text-slate-400 leading-7 mb-7">建立一個響應式個人網站，記錄大學四年的技術學習、作品與成長歷程。</p>
 <div class="flex flex-wrap gap-2 mb-7"><span class="tech-tag">React</span><span class="tech-tag">CSS</span><span class="tech-tag">GitHub</span></div>
 <div class="flex gap-5 text-sm font-semibold">
-<a href="https://github.com/YOUR-USERNAME" target="_blank" class="hover:text-blue-700 dark:hover:text-blue-400 transition">GitHub →</a>
-<a href="#" class="text-slate-500 hover:text-blue-700 dark:hover:text-blue-400 transition">Live Demo →</a>
+<a href="https://github.com/YOUR-USERNAME" target="_blank" class="hover:text-[#568fca] dark:hover:text-[#a9cfee] transition">GitHub →</a>
+<a href="#" class="text-slate-500 hover:text-[#568fca] dark:hover:text-[#a9cfee] transition">作品展示 →</a>
 </div>
 </article>
 
 <article class="project-card p-8 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 bg-transparent">
-<span class="text-xs font-semibold tracking-widest text-slate-400">PROJECT 03</span>
-<h3 class="text-2xl font-bold mt-7 mb-4">Coming Soon</h3>
-<p class="text-slate-500 dark:text-slate-400 leading-7">下一個專案將會在這裡出現。Keep learning. Keep building.</p>
+<span class="text-xs font-semibold tracking-widest text-slate-400">作品 03</span>
+<h3 class="text-2xl font-bold mt-7 mb-4">即將推出</h3>
+<p class="text-slate-500 dark:text-slate-400 leading-7">下一個專案將會在這裡出現。持續學習，持續創作。</p>
 </article>
 
 <article class="project-card p-8 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 bg-transparent">
-<span class="text-xs font-semibold tracking-widest text-slate-400">PROJECT 04</span>
-<h3 class="text-2xl font-bold mt-7 mb-4">Future Project</h3>
-<p class="text-slate-500 dark:text-slate-400 leading-7">A space reserved for future ideas, experiments, and collaborations.</p>
+<span class="text-xs font-semibold tracking-widest text-slate-400">作品 04</span>
+<h3 class="text-2xl font-bold mt-7 mb-4">未來作品</h3>
+<p class="text-slate-500 dark:text-slate-400 leading-7">為未來的想法、實驗與合作保留的一個空間。</p>
 </article>
 
 </div>
 </div>
 </section>
 
-<!-- EXPERIENCE -->
+<!-- 經歷 -->
 <section id="experience" class="py-28 bg-slate-200/70 dark:bg-slate-900/40 border-y border-slate-300 dark:border-slate-800">
 <div class="max-w-6xl mx-auto px-6 lg:px-8">
 <div class="mb-14">
-<p class="text-sm font-semibold tracking-widest uppercase text-blue-600 dark:text-blue-400 mb-3">Experience</p>
-<h2 class="text-3xl lg:text-4xl font-bold">Experience & Activities.</h2>
+<p class="text-sm font-semibold tracking-widest uppercase text-[#568fca] dark:text-[#a9cfee] mb-3">經歷</p>
+<h2 class="text-3xl lg:text-4xl font-bold">經歷與活動。</h2>
 </div>
 
 <div class="max-w-4xl">
 
 <div class="grid md:grid-cols-[160px_1fr] gap-6 py-8 border-t border-slate-300 dark:border-slate-800">
-<div class="text-sm font-semibold text-blue-600 dark:text-blue-400">2026 — Present</div>
+<div class="text-sm font-semibold text-[#568fca] dark:text-[#a9cfee]">2026 — 至今</div>
 <div>
-<h3 class="text-xl font-bold">University Student</h3>
+<h3 class="text-xl font-bold">大學生</h3>
 <p class="text-slate-500 dark:text-slate-400 mt-1">YOUR UNIVERSITY · YOUR DEPARTMENT</p>
-<p class="text-slate-600 dark:text-slate-400 leading-7 mt-4">Exploring programming, design, research, and new technologies while building a foundation for future projects.</p>
+<p class="text-slate-600 dark:text-slate-400 leading-7 mt-4">探索程式設計、設計、研究與新科技，同時為未來的專案建立基礎。</p>
 </div>
 </div>
 
 <div class="grid md:grid-cols-[160px_1fr] gap-6 py-8 border-t border-slate-300 dark:border-slate-800">
 <div class="text-sm font-semibold text-slate-400">2026</div>
 <div>
-<h3 class="text-xl font-bold">Personal Project</h3>
-<p class="text-slate-500 dark:text-slate-400 mt-1">Independent Learning</p>
-<p class="text-slate-600 dark:text-slate-400 leading-7 mt-4">Designed and developed personal web projects to practice frontend development and digital design.</p>
+<h3 class="text-xl font-bold">個人專案</h3>
+<p class="text-slate-500 dark:text-slate-400 mt-1">自主學習</p>
+<p class="text-slate-600 dark:text-slate-400 leading-7 mt-4">透過設計與開發個人網頁作品，練習前端開發與數位設計。</p>
 </div>
 </div>
 
 <div class="grid md:grid-cols-[160px_1fr] gap-6 py-8 border-t border-slate-300 dark:border-slate-800">
-<div class="text-sm font-semibold text-slate-400">Future</div>
+<div class="text-sm font-semibold text-slate-400">未來</div>
 <div>
-<h3 class="text-xl font-bold">Internship / Research / Competition</h3>
-<p class="text-slate-500 dark:text-slate-400 mt-1">To be continued...</p>
+<h3 class="text-xl font-bold">實習／研究／競賽</h3>
+<p class="text-slate-500 dark:text-slate-400 mt-1">持續累積中……</p>
 </div>
 </div>
 
@@ -248,47 +248,47 @@ This portfolio documents my journey from freshman to future professional.
 </div>
 </section>
 
-<!-- JOURNEY -->
+<!-- 學習歷程 -->
 <section id="journey" class="py-28">
 <div class="max-w-6xl mx-auto px-6 lg:px-8">
 <div class="mb-16">
-<p class="text-sm font-semibold tracking-widest uppercase text-blue-600 dark:text-blue-400 mb-3">My Journey</p>
-<h2 class="text-3xl lg:text-4xl font-bold">Four years of growth.</h2>
-<p class="text-slate-500 dark:text-slate-400 mt-4 max-w-xl leading-7">This timeline will grow with me throughout university.</p>
+<p class="text-sm font-semibold tracking-widest uppercase text-[#568fca] dark:text-[#a9cfee] mb-3">我的學習歷程</p>
+<h2 class="text-3xl lg:text-4xl font-bold">四年的成長。</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-4 max-w-xl leading-7">這條時間軸將會隨著我的大學生活持續成長。</p>
 </div>
 
 <div class="relative max-w-4xl">
 <div class="absolute left-[15px] top-3 bottom-0 w-px timeline-line"></div>
 
 <div class="relative pl-12 pb-16">
-<div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold ring-8 ring-slate-100 dark:ring-slate-950">01</div>
+<div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-[#6fa8dc] text-white flex items-center justify-center text-xs font-bold ring-8 ring-slate-100 dark:ring-slate-950">01</div>
 <div class="flex flex-col md:flex-row md:items-start gap-4">
-<div class="md:w-32"><p class="text-sm font-bold text-blue-600 dark:text-blue-400">2026</p><p class="text-sm text-slate-400">FRESHMAN</p></div>
-<div><h3 class="text-2xl font-bold mb-3">Start.</h3><ul class="text-slate-600 dark:text-slate-400 space-y-2 leading-7"><li>→ 建立程式設計基礎</li><li>→ 學習 HTML / CSS / JavaScript</li><li>→ 建立第一批個人作品</li><li>→ 開始使用 GitHub</li></ul></div>
+<div class="md:w-32"><p class="text-sm font-bold text-[#568fca] dark:text-[#a9cfee]">2026</p><p class="text-sm text-slate-400">大一</p></div>
+<div><h3 class="text-2xl font-bold mb-3">起步。</h3><ul class="text-slate-600 dark:text-slate-400 space-y-2 leading-7"><li>→ 建立程式設計基礎</li><li>→ 學習 HTML / CSS / JavaScript</li><li>→ 建立第一批個人作品</li><li>→ 開始使用 GitHub</li></ul></div>
 </div>
 </div>
 
 <div class="relative pl-12 pb-16">
-<div class="absolute left-0 top-1 w-8 h-8 rounded-full border-2 border-blue-400 bg-slate-100 dark:bg-slate-950 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xs font-bold">02</div>
+<div class="absolute left-0 top-1 w-8 h-8 rounded-full border-2 border-[#6fa8dc] bg-slate-100 dark:bg-slate-950 text-[#568fca] dark:text-[#a9cfee] flex items-center justify-center text-xs font-bold">02</div>
 <div class="flex flex-col md:flex-row gap-4">
-<div class="md:w-32"><p class="text-sm font-bold">2027</p><p class="text-sm text-slate-400">SOPHOMORE</p></div>
-<div><h3 class="text-2xl font-bold mb-3">Explore.</h3><ul class="text-slate-500 dark:text-slate-400 space-y-2 leading-7"><li>→ 深入學習 JavaScript / React</li><li>→ 開始接觸 UI / UX</li><li>→ 參與競賽或 Hackathon</li><li>→ 累積更多實作經驗</li></ul></div>
+<div class="md:w-32"><p class="text-sm font-bold">2027</p><p class="text-sm text-slate-400">大二</p></div>
+<div><h3 class="text-2xl font-bold mb-3">探索。</h3><ul class="text-slate-500 dark:text-slate-400 space-y-2 leading-7"><li>→ 深入學習 JavaScript / React</li><li>→ 開始接觸 UI / UX</li><li>→ 參與競賽或 Hackathon</li><li>→ 累積更多實作經驗</li></ul></div>
 </div>
 </div>
 
 <div class="relative pl-12 pb-16">
 <div class="absolute left-0 top-1 w-8 h-8 rounded-full border-2 border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-950 text-slate-400 flex items-center justify-center text-xs font-bold">03</div>
 <div class="flex flex-col md:flex-row gap-4">
-<div class="md:w-32"><p class="text-sm font-bold">2028</p><p class="text-sm text-slate-400">JUNIOR</p></div>
-<div><h3 class="text-2xl font-bold mb-3">Build.</h3><ul class="text-slate-500 dark:text-slate-400 space-y-2 leading-7"><li>→ 尋找實習機會</li><li>→ 參與團隊型專案</li><li>→ 學習 API / Database</li><li>→ 完成大型專題</li></ul></div>
+<div class="md:w-32"><p class="text-sm font-bold">2028</p><p class="text-sm text-slate-400">大三</p></div>
+<div><h3 class="text-2xl font-bold mb-3">實踐。</h3><ul class="text-slate-500 dark:text-slate-400 space-y-2 leading-7"><li>→ 尋找實習機會</li><li>→ 參與團隊型專案</li><li>→ 學習 API / Database</li><li>→ 完成大型專題</li></ul></div>
 </div>
 </div>
 
 <div class="relative pl-12">
 <div class="absolute left-0 top-1 w-8 h-8 rounded-full border-2 border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-950 text-slate-400 flex items-center justify-center text-xs font-bold">04</div>
 <div class="flex flex-col md:flex-row gap-4">
-<div class="md:w-32"><p class="text-sm font-bold">2029</p><p class="text-sm text-slate-400">SENIOR</p></div>
-<div><h3 class="text-2xl font-bold mb-3">Launch.</h3><ul class="text-slate-500 dark:text-slate-400 space-y-2 leading-7"><li>→ 完成畢業專題</li><li>→ 累積實習與團隊經驗</li><li>→ 建立完整作品集</li><li>→ Ready for the next chapter.</li></ul></div>
+<div class="md:w-32"><p class="text-sm font-bold">2029</p><p class="text-sm text-slate-400">大四</p></div>
+<div><h3 class="text-2xl font-bold mb-3">啟程。</h3><ul class="text-slate-500 dark:text-slate-400 space-y-2 leading-7"><li>→ 完成畢業專題</li><li>→ 累積實習與團隊經驗</li><li>→ 建立完整作品集</li><li>→ 準備迎接下一個階段。</li></ul></div>
 </div>
 </div>
 
@@ -296,38 +296,38 @@ This portfolio documents my journey from freshman to future professional.
 </div>
 </section>
 
-<!-- RESUME -->
-<section class="py-24 bg-blue-700 text-white">
+<!-- 履歷 -->
+<section class="py-24 bg-[#6fa8dc] text-white">
 <div class="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row md:items-center justify-between gap-8">
 <div>
-<p class="text-blue-200 text-sm font-semibold tracking-widest uppercase mb-3">Resume</p>
-<h2 class="text-3xl lg:text-4xl font-bold">Want to know more?</h2>
-<p class="text-blue-100 mt-3 max-w-xl">Take a look at my resume for a more detailed overview of my education, skills, and experience.</p>
+<p class="text-[#e5f1fb] text-sm font-semibold tracking-widest uppercase mb-3">履歷</p>
+<h2 class="text-3xl lg:text-4xl font-bold">想更了解我嗎？</h2>
+<p class="text-[#f0f7fc] mt-3 max-w-xl">歡迎查看我的履歷，了解更多關於我的教育背景、技能與經歷。</p>
 </div>
-<a href="resume.pdf" target="_blank" class="shrink-0 inline-flex items-center justify-center px-7 py-3.5 rounded-lg bg-white text-blue-700 font-bold hover:bg-blue-50 transition">View Resume →</a>
+<a href="resume.pdf" target="_blank" class="shrink-0 inline-flex items-center justify-center px-7 py-3.5 rounded-lg bg-white text-[#568fca] font-bold hover:bg-blue-50 transition">查看履歷 →</a>
 </div>
 </section>
 
-<!-- CONTACT -->
+<!-- 聯絡我 -->
 <section id="contact" class="py-32">
 <div class="max-w-4xl mx-auto px-6 text-center">
-<p class="text-sm font-semibold tracking-widest uppercase text-blue-600 dark:text-blue-400 mb-4">Contact</p>
-<h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">Let's build something <span class="gradient-text">meaningful.</span></h2>
-<p class="text-slate-500 dark:text-slate-400 text-lg mt-7 mb-9">Whether it's a project, collaboration, or just a conversation, feel free to reach out.</p>
-<a href="mailto:YOUR.EMAIL@example.com" class="inline-block text-xl sm:text-2xl font-bold hover:text-blue-700 dark:hover:text-blue-400 transition">YOUR.EMAIL@example.com</a>
+<p class="text-sm font-semibold tracking-widest uppercase text-[#568fca] dark:text-[#a9cfee] mb-4">聯絡我</p>
+<h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">一起創造一些<span class="gradient-text">有意義的事。</span></h2>
+<p class="text-slate-500 dark:text-slate-400 text-lg mt-7 mb-9">無論是專案、合作，或只是單純聊聊，都歡迎與我聯繫。</p>
+<a href="mailto:YOUR.EMAIL@example.com" class="inline-block text-xl sm:text-2xl font-bold hover:text-[#568fca] dark:hover:text-[#a9cfee] transition">YOUR.EMAIL@example.com</a>
 <div class="flex justify-center gap-7 mt-10 text-sm font-semibold">
-<a href="https://github.com/YOUR-USERNAME" target="_blank" class="hover:text-blue-700 dark:hover:text-blue-400 transition">GitHub</a>
-<a href="https://www.linkedin.com/in/YOUR-USERNAME/" target="_blank" class="hover:text-blue-700 dark:hover:text-blue-400 transition">LinkedIn</a>
-<a href="#" class="hover:text-blue-700 dark:hover:text-blue-400 transition">Instagram</a>
+<a href="https://github.com/YOUR-USERNAME" target="_blank" class="hover:text-[#568fca] dark:hover:text-[#a9cfee] transition">GitHub</a>
+<a href="https://www.linkedin.com/in/YOUR-USERNAME/" target="_blank" class="hover:text-[#568fca] dark:hover:text-[#a9cfee] transition">LinkedIn</a>
+<a href="#" class="hover:text-[#568fca] dark:hover:text-[#a9cfee] transition">Instagram</a>
 </div>
 </div>
 </section>
 
-<!-- FOOTER -->
+<!-- 頁尾 -->
 <footer class="border-t border-slate-300 dark:border-slate-800 py-8">
 <div class="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col sm:flex-row justify-between gap-4 text-sm text-slate-400">
 <p>© 2026 YOUR NAME.</p>
-<p>Built with curiosity & code.</p>
+<p>用好奇心與程式碼打造。</p>
 </div>
 </footer>
 
