@@ -19,18 +19,51 @@ body{font-family:'Inter','Noto Sans TC','Noto Sans',system-ui,sans-serif}
 ::selection{background:#d9e9f8;color:#172033}
 .dark ::selection{background:#4f7fae;color:#f1f7fc}
 .nav-blur{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
-.project-card{transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
-.project-card:hover{transform:translateY(-5px)}
+
+.project-card{transition:transform .45s cubic-bezier(.22,1,.36,1),border-color .3s ease,box-shadow .45s ease}
+.project-card:hover{transform:translateY(-7px);box-shadow:0 18px 35px rgba(86,143,202,.12);border-color:#6fa8dc}
+
 .timeline-line{background:linear-gradient(to bottom,#6fa8dc,#d9e9f8,transparent)}
 .dark .timeline-line{background:linear-gradient(to bottom,#6fa8dc,#315b82,transparent)}
+
 .gradient-text{background:linear-gradient(90deg,#568fca,#6fa8dc);-webkit-background-clip:text;background-clip:text;color:transparent}
 .dark .gradient-text{background:linear-gradient(90deg,#a9cfee,#6fa8dc);-webkit-background-clip:text;background-clip:text;color:transparent}
-.skill-tag{display:inline-block;padding:.45rem .75rem;border-radius:.5rem;background:#e2e8f0;color:#475569;font-size:.75rem;font-weight:600}
+
+.skill-tag{display:inline-block;padding:.45rem .75rem;border-radius:.5rem;background:#e2e8f0;color:#475569;font-size:.75rem;font-weight:600;transition:transform .25s ease,background .25s ease}
+.skill-tag:hover{transform:translateY(-3px);background:#d9e9f8}
 .dark .skill-tag{background:#1e293b;color:#cbd5e1}
-.tech-tag{display:inline-block;padding:.4rem .7rem;border-radius:.45rem;background:#e2eef9;color:#568fca;font-size:.7rem;font-weight:700}
+.dark .skill-tag:hover{background:#263b4e}
+
+.tech-tag{display:inline-block;padding:.4rem .7rem;border-radius:.45rem;background:#e2eef9;color:#568fca;font-size:.7rem;font-weight:700;transition:transform .25s ease}
+.tech-tag:hover{transform:translateY(-2px)}
 .dark .tech-tag{background:#1d3449;color:#a9cfee}
+
 .mobile-link{color:#475569;font-size:.95rem}
 .dark .mobile-link{color:#94a3b8}
+
+/* 滾動淡入 */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1)}
+.reveal.show{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:.08s}
+.reveal-delay-2{transition-delay:.16s}
+.reveal-delay-3{transition-delay:.24s}
+.reveal-delay-4{transition-delay:.32s}
+
+/* 導覽列底線 */
+nav a{position:relative}
+nav a:not(:first-child)::after{content:'';position:absolute;left:0;bottom:-5px;width:0;height:1px;background:#6fa8dc;transition:width .3s ease}
+nav a:not(:first-child):hover::after{width:100%}
+
+/* 首頁按鈕 */
+header a{transition:transform .3s ease,background .3s ease,border-color .3s ease,color .3s ease}
+header a:hover{transform:translateY(-2px)}
+
+/* 尊重裝置的減少動畫設定 */
+@media(prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*::before,*::after{animation:none!important;transition:none!important}
+.reveal{opacity:1;transform:none}
+}
 </style>
 </head>
 
@@ -103,17 +136,17 @@ body{font-family:'Inter','Noto Sans TC','Noto Sans',system-ui,sans-serif}
 <!-- 關於我 -->
 <section id="about" class="py-28 border-t border-slate-300 dark:border-slate-800">
 <div class="max-w-6xl mx-auto px-6 lg:px-8">
-<div class="grid lg:grid-cols-3 gap-12">
+<div class="grid lg:grid-cols-3 gap-12 reveal">
 <div>
 <p class="text-sm font-semibold tracking-widest uppercase text-[#568fca] dark:text-[#a9cfee] mb-3">關於我</p>
 <h2 class="text-3xl lg:text-4xl font-bold tracking-tight">關於<br>我的一些事。</h2>
 </div>
 <div class="lg:col-span-2 grid sm:grid-cols-2 gap-10">
-<div>
+<div class="reveal reveal-delay-1">
 <p class="text-slate-600 dark:text-slate-400 leading-8">我目前就讀於 <strong class="text-slate-900 dark:text-slate-100">YOUR UNIVERSITY</strong>，正在探索科技與創意之間的交集。</p>
 <p class="text-slate-600 dark:text-slate-400 leading-8 mt-5">我喜歡學習新的工具，將想法轉化為實際作品，也透過不斷嘗試與實驗持續進步。</p>
 </div>
-<div class="border-l border-slate-300 dark:border-slate-800 pl-7">
+<div class="border-l border-slate-300 dark:border-slate-800 pl-7 reveal reveal-delay-2">
 <div class="mb-6"><p class="text-xs uppercase tracking-wider text-slate-500 mb-1">教育背景</p><p class="font-semibold">YOUR UNIVERSITY</p><p class="text-sm text-slate-500 mt-1">YOUR DEPARTMENT</p></div>
 <div class="mb-6"><p class="text-xs uppercase tracking-wider text-slate-500 mb-1">所在地</p><p class="font-semibold">台灣</p></div>
 <div><p class="text-xs uppercase tracking-wider text-slate-500 mb-1">目前身分</p><p class="font-semibold">大一 · 2026</p></div>
@@ -126,27 +159,27 @@ body{font-family:'Inter','Noto Sans TC','Noto Sans',system-ui,sans-serif}
 <!-- 技能 -->
 <section id="skills" class="py-28 bg-slate-200/70 dark:bg-slate-900/40 border-y border-slate-300 dark:border-slate-800">
 <div class="max-w-6xl mx-auto px-6 lg:px-8">
-<div class="mb-14">
+<div class="mb-14 reveal">
 <p class="text-sm font-semibold tracking-widest uppercase text-[#568fca] dark:text-[#a9cfee] mb-3">技能</p>
 <h2 class="text-3xl lg:text-4xl font-bold">我會使用的工具。</h2>
 </div>
 <div class="grid md:grid-cols-3 gap-6">
 
-<div class="p-7 rounded-2xl border border-slate-300 dark:border-slate-800 bg-slate-100 dark:bg-slate-900">
+<div class="p-7 rounded-2xl border border-slate-300 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 project-card reveal reveal-delay-1">
 <div class="text-2xl mb-5">⌘</div><h3 class="text-xl font-bold mb-4">程式開發</h3>
 <div class="flex flex-wrap gap-2">
 <span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Tailwind CSS</span><span class="skill-tag">React</span><span class="skill-tag">Git</span><span class="skill-tag">GitHub</span>
 </div>
 </div>
 
-<div class="p-7 rounded-2xl border border-slate-300 dark:border-slate-800 bg-slate-100 dark:bg-slate-900">
+<div class="p-7 rounded-2xl border border-slate-300 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 project-card reveal reveal-delay-2">
 <div class="text-2xl mb-5">✎</div><h3 class="text-xl font-bold mb-4">設計</h3>
 <div class="flex flex-wrap gap-2">
 <span class="skill-tag">Figma</span><span class="skill-tag">UI 設計</span><span class="skill-tag">UX</span><span class="skill-tag">字體設計</span><span class="skill-tag">視覺設計</span>
 </div>
 </div>
 
-<div class="p-7 rounded-2xl border border-slate-300 dark:border-slate-800 bg-slate-100 dark:bg-slate-900">
+<div class="p-7 rounded-2xl border border-slate-300 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 project-card reveal reveal-delay-3">
 <div class="text-2xl mb-5">✦</div><h3 class="text-xl font-bold mb-4">其他能力</h3>
 <div class="flex flex-wrap gap-2">
 <span class="skill-tag">AI 工具</span><span class="skill-tag">問題解決</span><span class="skill-tag">研究</span><span class="skill-tag">簡報</span><span class="skill-tag">團隊合作</span>
@@ -160,7 +193,7 @@ body{font-family:'Inter','Noto Sans TC','Noto Sans',system-ui,sans-serif}
 <!-- 作品 -->
 <section id="projects" class="py-28">
 <div class="max-w-6xl mx-auto px-6 lg:px-8">
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 reveal">
 <div>
 <p class="text-sm font-semibold tracking-widest uppercase text-[#568fca] dark:text-[#a9cfee] mb-3">精選作品</p>
 <h2 class="text-3xl lg:text-4xl font-bold">作品集。</h2>
@@ -170,7 +203,7 @@ body{font-family:'Inter','Noto Sans TC','Noto Sans',system-ui,sans-serif}
 
 <div class="grid md:grid-cols-2 gap-6">
 
-<article class="project-card p-8 rounded-2xl border border-slate-300 dark:border-slate-800 bg-slate-50 dark:bg-slate-900">
+<article class="project-card p-8 rounded-2xl border border-slate-300 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 reveal reveal-delay-1">
 <div class="flex justify-between items-start mb-8"><span class="text-xs font-semibold tracking-widest text-[#568fca] dark:text-[#a9cfee]">作品 01</span><span class="text-slate-400">↗</span></div>
 <h3 class="text-2xl font-bold mb-4">AI 智慧學習助手</h3>
 <p class="text-slate-600 dark:text-slate-400 leading-7 mb-7">使用前端技術與 AI API 打造智慧問答介面，嘗試將人工智慧融入日常學習流程。</p>
@@ -181,7 +214,7 @@ body{font-family:'Inter','Noto Sans TC','Noto Sans',system-ui,sans-serif}
 </div>
 </article>
 
-<article class="project-card p-8 rounded-2xl border border-slate-300 dark:border-slate-800 bg-slate-50 dark:bg-slate-900">
+<article class="project-card p-8 rounded-2xl border border-slate-300 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 reveal reveal-delay-2">
 <div class="flex justify-between items-start mb-8"><span class="text-xs font-semibold tracking-widest text-[#568fca] dark:text-[#a9cfee]">作品 02</span><span class="text-slate-400">↗</span></div>
 <h3 class="text-2xl font-bold mb-4">個人部落格</h3>
 <p class="text-slate-600 dark:text-slate-400 leading-7 mb-7">建立一個響應式個人網站，記錄大學四年的技術學習、作品與成長歷程。</p>
@@ -192,13 +225,13 @@ body{font-family:'Inter','Noto Sans TC','Noto Sans',system-ui,sans-serif}
 </div>
 </article>
 
-<article class="project-card p-8 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 bg-transparent">
+<article class="project-card p-8 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 bg-transparent reveal reveal-delay-3">
 <span class="text-xs font-semibold tracking-widest text-slate-400">作品 03</span>
 <h3 class="text-2xl font-bold mt-7 mb-4">即將推出</h3>
 <p class="text-slate-500 dark:text-slate-400 leading-7">下一個專案將會在這裡出現。持續學習，持續創作。</p>
 </article>
 
-<article class="project-card p-8 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 bg-transparent">
+<article class="project-card p-8 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 bg-transparent reveal reveal-delay-4">
 <span class="text-xs font-semibold tracking-widest text-slate-400">作品 04</span>
 <h3 class="text-2xl font-bold mt-7 mb-4">未來作品</h3>
 <p class="text-slate-500 dark:text-slate-400 leading-7">為未來的想法、實驗與合作保留的一個空間。</p>
@@ -211,14 +244,14 @@ body{font-family:'Inter','Noto Sans TC','Noto Sans',system-ui,sans-serif}
 <!-- 經歷 -->
 <section id="experience" class="py-28 bg-slate-200/70 dark:bg-slate-900/40 border-y border-slate-300 dark:border-slate-800">
 <div class="max-w-6xl mx-auto px-6 lg:px-8">
-<div class="mb-14">
+<div class="mb-14 reveal">
 <p class="text-sm font-semibold tracking-widest uppercase text-[#568fca] dark:text-[#a9cfee] mb-3">經歷</p>
 <h2 class="text-3xl lg:text-4xl font-bold">經歷與活動。</h2>
 </div>
 
 <div class="max-w-4xl">
 
-<div class="grid md:grid-cols-[160px_1fr] gap-6 py-8 border-t border-slate-300 dark:border-slate-800">
+<div class="grid md:grid-cols-[160px_1fr] gap-6 py-8 border-t border-slate-300 dark:border-slate-800 reveal">
 <div class="text-sm font-semibold text-[#568fca] dark:text-[#a9cfee]">2026 — 至今</div>
 <div>
 <h3 class="text-xl font-bold">大學生</h3>
@@ -227,7 +260,7 @@ body{font-family:'Inter','Noto Sans TC','Noto Sans',system-ui,sans-serif}
 </div>
 </div>
 
-<div class="grid md:grid-cols-[160px_1fr] gap-6 py-8 border-t border-slate-300 dark:border-slate-800">
+<div class="grid md:grid-cols-[160px_1fr] gap-6 py-8 border-t border-slate-300 dark:border-slate-800 reveal reveal-delay-1">
 <div class="text-sm font-semibold text-slate-400">2026</div>
 <div>
 <h3 class="text-xl font-bold">個人專案</h3>
@@ -236,7 +269,7 @@ body{font-family:'Inter','Noto Sans TC','Noto Sans',system-ui,sans-serif}
 </div>
 </div>
 
-<div class="grid md:grid-cols-[160px_1fr] gap-6 py-8 border-t border-slate-300 dark:border-slate-800">
+<div class="grid md:grid-cols-[160px_1fr] gap-6 py-8 border-t border-slate-300 dark:border-slate-800 reveal reveal-delay-2">
 <div class="text-sm font-semibold text-slate-400">未來</div>
 <div>
 <h3 class="text-xl font-bold">實習／研究／競賽</h3>
@@ -251,7 +284,7 @@ body{font-family:'Inter','Noto Sans TC','Noto Sans',system-ui,sans-serif}
 <!-- 學習歷程 -->
 <section id="journey" class="py-28">
 <div class="max-w-6xl mx-auto px-6 lg:px-8">
-<div class="mb-16">
+<div class="mb-16 reveal">
 <p class="text-sm font-semibold tracking-widest uppercase text-[#568fca] dark:text-[#a9cfee] mb-3">我的學習歷程</p>
 <h2 class="text-3xl lg:text-4xl font-bold">四年的成長。</h2>
 <p class="text-slate-500 dark:text-slate-400 mt-4 max-w-xl leading-7">這條時間軸將會隨著我的大學生活持續成長。</p>
@@ -260,7 +293,7 @@ body{font-family:'Inter','Noto Sans TC','Noto Sans',system-ui,sans-serif}
 <div class="relative max-w-4xl">
 <div class="absolute left-[15px] top-3 bottom-0 w-px timeline-line"></div>
 
-<div class="relative pl-12 pb-16">
+<div class="relative pl-12 pb-16 reveal">
 <div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-[#6fa8dc] text-white flex items-center justify-center text-xs font-bold ring-8 ring-slate-100 dark:ring-slate-950">01</div>
 <div class="flex flex-col md:flex-row md:items-start gap-4">
 <div class="md:w-32"><p class="text-sm font-bold text-[#568fca] dark:text-[#a9cfee]">2026</p><p class="text-sm text-slate-400">大一</p></div>
@@ -268,7 +301,7 @@ body{font-family:'Inter','Noto Sans TC','Noto Sans',system-ui,sans-serif}
 </div>
 </div>
 
-<div class="relative pl-12 pb-16">
+<div class="relative pl-12 pb-16 reveal reveal-delay-1">
 <div class="absolute left-0 top-1 w-8 h-8 rounded-full border-2 border-[#6fa8dc] bg-slate-100 dark:bg-slate-950 text-[#568fca] dark:text-[#a9cfee] flex items-center justify-center text-xs font-bold">02</div>
 <div class="flex flex-col md:flex-row gap-4">
 <div class="md:w-32"><p class="text-sm font-bold">2027</p><p class="text-sm text-slate-400">大二</p></div>
@@ -276,7 +309,7 @@ body{font-family:'Inter','Noto Sans TC','Noto Sans',system-ui,sans-serif}
 </div>
 </div>
 
-<div class="relative pl-12 pb-16">
+<div class="relative pl-12 pb-16 reveal reveal-delay-2">
 <div class="absolute left-0 top-1 w-8 h-8 rounded-full border-2 border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-950 text-slate-400 flex items-center justify-center text-xs font-bold">03</div>
 <div class="flex flex-col md:flex-row gap-4">
 <div class="md:w-32"><p class="text-sm font-bold">2028</p><p class="text-sm text-slate-400">大三</p></div>
@@ -284,7 +317,7 @@ body{font-family:'Inter','Noto Sans TC','Noto Sans',system-ui,sans-serif}
 </div>
 </div>
 
-<div class="relative pl-12">
+<div class="relative pl-12 reveal reveal-delay-3">
 <div class="absolute left-0 top-1 w-8 h-8 rounded-full border-2 border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-950 text-slate-400 flex items-center justify-center text-xs font-bold">04</div>
 <div class="flex flex-col md:flex-row gap-4">
 <div class="md:w-32"><p class="text-sm font-bold">2029</p><p class="text-sm text-slate-400">大四</p></div>
@@ -297,7 +330,7 @@ body{font-family:'Inter','Noto Sans TC','Noto Sans',system-ui,sans-serif}
 </section>
 
 <!-- 履歷 -->
-<section class="py-24 bg-[#6fa8dc] text-white">
+<section class="py-24 bg-[#6fa8dc] text-white reveal">
 <div class="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row md:items-center justify-between gap-8">
 <div>
 <p class="text-[#e5f1fb] text-sm font-semibold tracking-widest uppercase mb-3">履歷</p>
@@ -310,7 +343,7 @@ body{font-family:'Inter','Noto Sans TC','Noto Sans',system-ui,sans-serif}
 
 <!-- 聯絡我 -->
 <section id="contact" class="py-32">
-<div class="max-w-4xl mx-auto px-6 text-center">
+<div class="max-w-4xl mx-auto px-6 text-center reveal">
 <p class="text-sm font-semibold tracking-widest uppercase text-[#568fca] dark:text-[#a9cfee] mb-4">聯絡我</p>
 <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">一起創造一些<span class="gradient-text">有意義的事。</span></h2>
 <p class="text-slate-500 dark:text-slate-400 text-lg mt-7 mb-9">無論是專案、合作，或只是單純聊聊，都歡迎與我聯繫。</p>
@@ -343,6 +376,10 @@ updateThemeIcon();
 const mobileMenuButton=document.getElementById('mobileMenuButton'),mobileMenu=document.getElementById('mobileMenu');
 mobileMenuButton.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
 document.querySelectorAll('.mobile-link').forEach(link=>link.addEventListener('click',()=>mobileMenu.classList.add('hidden')));
+
+/* 滾動動畫 */
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
 
 </body>
