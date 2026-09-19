@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活動 01：水與生活 — 獨立展示頁</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { fontFamily: { sans: ['Inter', 'Noto Sans TC', 'sans-serif'] } } }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-100 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen py-12 px-6 transition-colors duration-300">
+
+    <div class="max-w-3xl mx-auto bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 rounded-2xl p-8 shadow-sm">
+        
+        <!-- 頂部返回連結 -->
+        <div class="mb-6">
+            <a href="intro-tech-assignments.html" class="text-sm font-bold text-[#568fca] hover:underline inline-flex items-center gap-1">
+                ← 返回作業集總覽
+            </a>
+        </div>
+
+        <!-- 標題與標籤 -->
+        <div class="border-b border-slate-200 dark:border-slate-800 pb-6 mb-6">
+            <span class="inline-block bg-slate-200 dark:bg-slate-800 text-xs font-bold px-2.5 py-1 rounded-md mb-2">HTML5 實作</span>
+            <h1 class="text-3xl font-extrabold tracking-tight">水與生活：探索身邊的科學</h1>
+            <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">運用語意化標籤呈現「水與生活」科學活動介紹內容。</p>
+        </div>
+
+        <!-- 作業內容區塊 -->
+        <article class="space-y-6 leading-relaxed">
+            
+            <section class="p-4 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800">
+                <p>歡迎來到科學探索體驗！水是地球上最重要的資源之一，本活動將帶領大家認識水的特性與應用。</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-bold mb-2 text-slate-800 dark:text-slate-200">一、水的基礎化學特性</h2>
+                <p class="mb-2">
+                    水的化學式為 <b class="text-blue-600 dark:text-blue-400">H<sub>2</sub>O</b>，代表每個水分子是由兩個氫原子與一個氧原子組成。
+                </p>
+                <p class="text-sm text-slate-500 italic">
+                    <i>備註：在標準大氣壓下，水的沸點為 100 <sup>o</sup>C。</i>
+                </p>
+            </section>
+
+            <hr class="border-slate-200 dark:border-slate-800">
+
+            <section>
+                <h2 class="text-xl font-bold mb-2 text-slate-800 dark:text-slate-200">二、日常生活中的水資源</h2>
+                <p class="mb-4">
+                    我們的身體大約有 <b>60%~70%</b> 是由水組成的，保持充足的水分對健康非常重要。
+                </p>
+
+                <h3 class="text-lg font-semibold mb-2 text-slate-700 dark:text-slate-300">活動小挑戰</h3>
+                <p class="text-sm bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900 p-3 rounded-lg text-blue-900 dark:text-blue-300">
+                    請記錄你今天喝了幾杯水，並嘗試計算總毫升數（cm<sup>3</sup>）！
+                </p>
+            </section>
+
+        </article>
+
+        <!-- 頁尾資訊 -->
+        <div class="mt-8 pt-4 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center text-xs text-slate-400">
+            <span>作業檔名：act01.html</span>
+            <a href="intro-tech-assignments.html" class="hover:underline">返回作業總覽</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
