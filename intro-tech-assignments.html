@@ -15,11 +15,10 @@ tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{sans:['Inter','Noto
 html{scroll-behavior:smooth}
 body{font-family:'Inter','Noto Sans TC',sans-serif}
 .nav-blur{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
-.badge{display:inline-block;padding:.25rem .6rem;border-radius:.375rem;font-size:.75rem;font-weight:700}
 </style>
 </head>
 
-<body class="bg-slate-100 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+<body class="bg-slate-100 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
 
 <!-- 導覽列 -->
 <nav class="fixed top-0 left-0 right-0 z-50 border-b border-slate-300/70 dark:border-slate-800/70 bg-slate-100/80 dark:bg-slate-950/80 nav-blur">
@@ -47,86 +46,32 @@ body{font-family:'Inter','Noto Sans TC',sans-serif}
 
 <!-- HTML 實作（活動 01-04） -->
 <section>
-<h2 class="text-3xl font-bold mb-8 border-b border-slate-300 dark:border-slate-800 pb-4">HTML 基礎與進階實作 (活動 01 - 04)</h2>
+<h2 class="text-2xl font-bold mb-8 border-b border-slate-300 dark:border-slate-800 pb-4">HTML 基礎與進階實作 (活動 01 - 04)</h2>
 
-<div class="grid md:grid-cols-2 gap-8">
+<div class="grid md:grid-cols-2 gap-6">
 
-<!-- 活動 01 卡片 -->
-<a href="act01.html" class="group bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800 flex flex-col justify-between hover:border-[#568fca] dark:hover:border-[#6fa8dc] hover:shadow-lg transition duration-200 block">
-<div>
-<div class="flex justify-between items-center mb-3">
-<h3 class="text-xl font-bold group-hover:text-[#568fca] dark:group-hover:text-[#6fa8dc] transition">活動 01：文字層級與標籤</h3>
-<span class="badge bg-slate-200 dark:bg-slate-800">HTML</span>
-</div>
-<p class="text-sm text-slate-600 dark:text-slate-400 mb-4">運用 <code>h1~h3</code>、<code>p</code>、<code>b</code>、<code>i</code>、<code>sub</code>、<code>sup</code> 製作「水與生活」科學活動介紹頁。</p>
-<div class="p-4 bg-white dark:bg-slate-950 rounded-lg border border-slate-200 dark:border-slate-800 text-xs font-mono">
-&lt;h1&gt;水的化學式：H&lt;sub&gt;2&lt;/sub&gt;O&lt;/h1&gt;<br>
-&lt;p&gt;&lt;b&gt;重要：&lt;/b&gt; 水是生命的基礎資源。&lt;/p&gt;
-</div>
-</div>
-<div class="mt-6 flex justify-between items-center pt-3 border-t border-slate-200 dark:border-slate-800">
-<span class="text-xs text-slate-400">作業檔名：act01.html</span>
-<span class="text-xs font-bold text-[#568fca] dark:text-[#a9cfee] group-hover:translate-x-1 transition-transform inline-block">查看細部頁面 ↗</span>
-</div>
+<!-- 活動 01 -->
+<a href="act01.html" class="group bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800 flex items-center justify-between hover:border-[#568fca] dark:hover:border-[#6fa8dc] hover:shadow-md transition duration-200">
+  <h3 class="text-xl font-bold group-hover:text-[#568fca] dark:group-hover:text-[#6fa8dc] transition">活動 01：文字層級與標籤</h3>
+  <span class="text-sm font-bold text-[#568fca] dark:text-[#a9cfee] group-hover:translate-x-1 transition-transform shrink-0 ml-4">查看細部頁面 ↗</span>
 </a>
 
-<!-- 活動 02 卡片 -->
-<a href="act02.html" class="group bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800 flex flex-col justify-between hover:border-[#568fca] dark:hover:border-[#6fa8dc] hover:shadow-lg transition duration-200 block">
-<div>
-<div class="flex justify-between items-center mb-3">
-<h3 class="text-xl font-bold group-hover:text-[#568fca] dark:group-hover:text-[#6fa8dc] transition">活動 02：多媒體標籤與格式比較</h3>
-<span class="badge bg-slate-200 dark:bg-slate-800">HTML / Media</span>
-</div>
-<p class="text-sm text-slate-600 dark:text-slate-400 mb-4">整合 <code>img</code>、<code>audio</code>、<code>video</code>，並比較 PNG、SVG 與 JPG 之差異，製作「自然觀察任務卡」。</p>
-<div class="p-4 bg-white dark:bg-slate-950 rounded-lg border border-slate-200 dark:border-slate-800 text-xs font-mono">
-&lt;img src="flower-photo.png" alt="圖片" width="200"&gt;<br>
-&lt;audio controls src="notice.wav"&gt;&lt;/audio&gt;
-</div>
-</div>
-<div class="mt-6 flex justify-between items-center pt-3 border-t border-slate-200 dark:border-slate-800">
-<span class="text-xs text-slate-400">作業檔名：act02.html</span>
-<span class="text-xs font-bold text-[#568fca] dark:text-[#a9cfee] group-hover:translate-x-1 transition-transform inline-block">查看細部頁面 ↗</span>
-</div>
+<!-- 活動 02 -->
+<a href="act02.html" class="group bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800 flex items-center justify-between hover:border-[#568fca] dark:hover:border-[#6fa8dc] hover:shadow-md transition duration-200">
+  <h3 class="text-xl font-bold group-hover:text-[#568fca] dark:group-hover:text-[#6fa8dc] transition">活動 02：多媒體標籤與格式比較</h3>
+  <span class="text-sm font-bold text-[#568fca] dark:text-[#a9cfee] group-hover:translate-x-1 transition-transform shrink-0 ml-4">查看細部頁面 ↗</span>
 </a>
 
-<!-- 活動 03 卡片 -->
-<a href="act03.html" class="group bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800 flex flex-col justify-between hover:border-[#568fca] dark:hover:border-[#6fa8dc] hover:shadow-lg transition duration-200 block">
-<div>
-<div class="flex justify-between items-center mb-3">
-<h3 class="text-xl font-bold group-hover:text-[#568fca] dark:group-hover:text-[#6fa8dc] transition">活動 03：清單與表格</h3>
-<span class="badge bg-slate-200 dark:bg-slate-800">HTML / Table</span>
-</div>
-<p class="text-sm text-slate-600 dark:text-slate-400 mb-4">使用 <code>ul/ol</code> 清單與 <code>table/caption/tr/th/td</code> 表格整理「紙橋挑戰社」頁面。</p>
-<div class="p-4 bg-white dark:bg-slate-950 rounded-lg border border-slate-200 dark:border-slate-800 text-xs font-mono">
-&lt;table&gt;<br>
-&nbsp;&nbsp;&lt;caption&gt;小組分工表&lt;/caption&gt;<br>
-&nbsp;&nbsp;&lt;tr&gt;&lt;th scope="col"&gt;角色名稱&lt;/th&gt;&lt;/tr&gt;<br>
-&lt;/table&gt;
-</div>
-</div>
-<div class="mt-6 flex justify-between items-center pt-3 border-t border-slate-200 dark:border-slate-800">
-<span class="text-xs text-slate-400">作業檔名：act03.html</span>
-<span class="text-xs font-bold text-[#568fca] dark:text-[#a9cfee] group-hover:translate-x-1 transition-transform inline-block">查看細部頁面 ↗</span>
-</div>
+<!-- 活動 03 -->
+<a href="act03.html" class="group bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800 flex items-center justify-between hover:border-[#568fca] dark:hover:border-[#6fa8dc] hover:shadow-md transition duration-200">
+  <h3 class="text-xl font-bold group-hover:text-[#568fca] dark:group-hover:text-[#6fa8dc] transition">活動 03：清單與表格</h3>
+  <span class="text-sm font-bold text-[#568fca] dark:text-[#a9cfee] group-hover:translate-x-1 transition-transform shrink-0 ml-4">查看細部頁面 ↗</span>
 </a>
 
-<!-- 活動 04 卡片（已更新為可點選連結至 act04.html） -->
-<a href="act04.html" class="group bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800 flex flex-col justify-between hover:border-[#568fca] dark:hover:border-[#6fa8dc] hover:shadow-lg transition duration-200 block">
-<div>
-<div class="flex justify-between items-center mb-3">
-<h3 class="text-xl font-bold group-hover:text-[#568fca] dark:group-hover:text-[#6fa8dc] transition">活動 04：表單元件設計</h3>
-<span class="badge bg-slate-200 dark:bg-slate-800">HTML / Form</span>
-</div>
-<p class="text-sm text-slate-600 dark:text-slate-400 mb-4">靈活運用 <code>label</code>、<code>input</code>、<code>select</code>、<code>radio</code>、<code>checkbox</code>、<code>textarea</code> 設計「放學後社團體驗表」。</p>
-<div class="p-4 bg-white dark:bg-slate-950 rounded-lg border border-slate-200 dark:border-slate-800 text-xs font-mono">
-&lt;label for="club"&gt;想體驗的社團&lt;/label&gt;<br>
-&lt;select id="club" name="club"&gt;&lt;option&gt;故事劇場&lt;/option&gt;&lt;/select&gt;
-</div>
-</div>
-<div class="mt-6 flex justify-between items-center pt-3 border-t border-slate-200 dark:border-slate-800">
-<span class="text-xs text-slate-400">作業檔名：act04.html</span>
-<span class="text-xs font-bold text-[#568fca] dark:text-[#a9cfee] group-hover:translate-x-1 transition-transform inline-block">查看細部頁面 ↗</span>
-</div>
+<!-- 活動 04 -->
+<a href="act04.html" class="group bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800 flex items-center justify-between hover:border-[#568fca] dark:hover:border-[#6fa8dc] hover:shadow-md transition duration-200">
+  <h3 class="text-xl font-bold group-hover:text-[#568fca] dark:group-hover:text-[#6fa8dc] transition">活動 04：表單元件設計</h3>
+  <span class="text-sm font-bold text-[#568fca] dark:text-[#a9cfee] group-hover:translate-x-1 transition-transform shrink-0 ml-4">查看細部頁面 ↗</span>
 </a>
 
 </div>
@@ -134,49 +79,39 @@ body{font-family:'Inter','Noto Sans TC',sans-serif}
 
 <!-- CSS 實作（活動 05-09） -->
 <section>
-<h2 class="text-3xl font-bold mb-8 border-b border-slate-300 dark:border-slate-800 pb-4">CSS 視覺與無障礙實作 (活動 05 - 09)</h2>
+<h2 class="text-2xl font-bold mb-8 border-b border-slate-300 dark:border-slate-800 pb-4">CSS 視覺與無障礙實作 (活動 05 - 09)</h2>
 
-<div class="grid md:grid-cols-3 gap-6">
+<div class="grid md:grid-cols-2 gap-6">
 
 <!-- 活動 05 -->
-<div class="bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800">
-<span class="text-xs font-bold text-[#568fca]">活動 05</span>
-<h3 class="text-lg font-bold my-2">視覺風格與色彩實驗室</h3>
-<p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">設定 Typography、對比配色與外距 (margin/padding)，配合色彩實驗室驗證彩度與對比度。</p>
-<span class="inline-block text-[10px] bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded">可選為提交案例</span>
-</div>
+<a href="act05.html" class="group bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800 flex items-center justify-between hover:border-[#568fca] dark:hover:border-[#6fa8dc] hover:shadow-md transition duration-200">
+  <h3 class="text-xl font-bold group-hover:text-[#568fca] dark:group-hover:text-[#6fa8dc] transition">活動 05：視覺風格與色彩實驗室</h3>
+  <span class="text-sm font-bold text-[#568fca] dark:text-[#a9cfee] group-hover:translate-x-1 transition-transform shrink-0 ml-4">查看細部頁面 ↗</span>
+</a>
 
 <!-- 活動 06 -->
-<div class="bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800">
-<span class="text-xs font-bold text-[#568fca]">活動 06</span>
-<h3 class="text-lg font-bold my-2">整頁版型配置</h3>
-<p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">使用 Flexbox 與 CSS Grid 實作單欄、兩欄、三欄及側欄等網頁佈局結構。</p>
-<span class="inline-block text-[10px] bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded">可選為提交案例</span>
-</div>
+<a href="act06.html" class="group bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800 flex items-center justify-between hover:border-[#568fca] dark:hover:border-[#6fa8dc] hover:shadow-md transition duration-200">
+  <h3 class="text-xl font-bold group-hover:text-[#568fca] dark:group-hover:text-[#6fa8dc] transition">活動 06：整頁版型配置</h3>
+  <span class="text-sm font-bold text-[#568fca] dark:text-[#a9cfee] group-hover:translate-x-1 transition-transform shrink-0 ml-4">查看細部頁面 ↗</span>
+</a>
 
 <!-- 活動 07 -->
-<div class="bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800">
-<span class="text-xs font-bold text-[#568fca]">活動 07</span>
-<h3 class="text-lg font-bold my-2">卡片排列與 Object-fit</h3>
-<p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">掌握網格卡片對齊，並針對變形的圖片使用 `object-fit: cover` 統一顯示比例。</p>
-<span class="inline-block text-[10px] bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded">可選為提交案例</span>
-</div>
+<a href="act07.html" class="group bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800 flex items-center justify-between hover:border-[#568fca] dark:hover:border-[#6fa8dc] hover:shadow-md transition duration-200">
+  <h3 class="text-xl font-bold group-hover:text-[#568fca] dark:group-hover:text-[#6fa8dc] transition">活動 07：卡片排列與 Object-fit</h3>
+  <span class="text-sm font-bold text-[#568fca] dark:text-[#a9cfee] group-hover:translate-x-1 transition-transform shrink-0 ml-4">查看細部頁面 ↗</span>
+</a>
 
 <!-- 活動 08 -->
-<div class="bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800">
-<span class="text-xs font-bold text-[#568fca]">活動 08</span>
-<h3 class="text-lg font-bold my-2">RWD 響應式網頁設計</h3>
-<p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">解決橫向破版問題，使用 `@media` 媒體查詢針對手機、平板與桌機優化體驗。</p>
-<span class="inline-block text-[10px] bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded">可選為提交案例</span>
-</div>
+<a href="act08.html" class="group bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800 flex items-center justify-between hover:border-[#568fca] dark:hover:border-[#6fa8dc] hover:shadow-md transition duration-200">
+  <h3 class="text-xl font-bold group-hover:text-[#568fca] dark:group-hover:text-[#6fa8dc] transition">活動 08：RWD 響應式網頁設計</h3>
+  <span class="text-sm font-bold text-[#568fca] dark:text-[#a9cfee] group-hover:translate-x-1 transition-transform shrink-0 ml-4">查看細部頁面 ↗</span>
+</a>
 
 <!-- 活動 09 -->
-<div class="bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800 md:col-span-2">
-<span class="text-xs font-bold text-[#568fca]">活動 09</span>
-<h3 class="text-lg font-bold my-2">無障礙網頁檢測與修正</h3>
-<p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">使用 WAVE 檢測工具發現低對比度與缺失 label 等缺陷，優化鍵盤 Focus 焦點與放大顯示功能。</p>
-<span class="inline-block text-[10px] bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded">可選為提交案例</span>
-</div>
+<a href="act09.html" class="group bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800 flex items-center justify-between hover:border-[#568fca] dark:hover:border-[#6fa8dc] hover:shadow-md transition duration-200 md:col-span-2">
+  <h3 class="text-xl font-bold group-hover:text-[#568fca] dark:group-hover:text-[#6fa8dc] transition">活動 09：無障礙網頁檢測與修正</h3>
+  <span class="text-sm font-bold text-[#568fca] dark:text-[#a9cfee] group-hover:translate-x-1 transition-transform shrink-0 ml-4">查看細部頁面 ↗</span>
+</a>
 
 </div>
 
@@ -194,7 +129,7 @@ body{font-family:'Inter','Noto Sans TC',sans-serif}
 </main>
 
 <!-- 頁尾 -->
-<footer class="border-t border-slate-300 dark:border-slate-800 py-8 text-center text-sm text-slate-400">
+<footer class="border-t border-slate-300 dark:border-slate-800 py-8 text-center text-sm text-slate-400 mt-auto">
 <p>© 2026 YOUR NAME. 數位科技概論作業成果展示</p>
 </footer>
 
