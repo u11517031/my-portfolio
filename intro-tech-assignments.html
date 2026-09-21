@@ -70,23 +70,24 @@ body{font-family:'Inter','Noto Sans TC',sans-serif}
 </div>
 </a>
 
-<!-- 活動 02 -->
-<div class="bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800 flex flex-col justify-between">
+<!-- 活動 02 卡片（修改為可點選連結至 act02.html） -->
+<a href="act02.html" class="group bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800 flex flex-col justify-between hover:border-[#568fca] dark:hover:border-[#6fa8dc] hover:shadow-lg transition duration-200 block">
 <div>
 <div class="flex justify-between items-center mb-3">
-<h3 class="text-xl font-bold">活動 02：多媒體標籤與格式比較</h3>
+<h3 class="text-xl font-bold group-hover:text-[#568fca] dark:group-hover:text-[#6fa8dc] transition">活動 02：多媒體標籤與格式比較</h3>
 <span class="badge bg-slate-200 dark:bg-slate-800">HTML / Media</span>
 </div>
 <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">整合 <code>img</code>、<code>audio</code>、<code>video</code>，並比較 PNG、SVG 與 JPG 之差異，製作「自然觀察任務卡」。</p>
 <div class="p-4 bg-white dark:bg-slate-950 rounded-lg border border-slate-200 dark:border-slate-800 text-xs font-mono">
-&lt;img src="images/leaf.svg" alt="樹葉觀察卡"&gt;<br>
-&lt;audio controls src="audio/birds.mp3"&gt;&lt;/audio&gt;
+&lt;img src="leaf-photo.png" alt="樹葉觀察卡" width="200"&gt;<br>
+&lt;audio controls src="notice.wav"&gt;&lt;/audio&gt;
 </div>
 </div>
-<div class="mt-6 text-right pt-3 border-t border-slate-200 dark:border-slate-800">
-<span class="text-xs text-slate-400">作業格式：natural_card.zip</span>
+<div class="mt-6 flex justify-between items-center pt-3 border-t border-slate-200 dark:border-slate-800">
+<span class="text-xs text-slate-400">作業檔名：act02.html</span>
+<span class="text-xs font-bold text-[#568fca] dark:text-[#a9cfee] group-hover:translate-x-1 transition-transform inline-block">查看細部頁面 ↗</span>
 </div>
-</div>
+</a>
 
 <!-- 活動 03 -->
 <div class="bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-800 flex flex-col justify-between">
@@ -202,10 +203,6 @@ function toggleTheme(){document.documentElement.classList.toggle('dark');const i
 themeToggle.addEventListener('click',toggleTheme);
 if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark');
 updateThemeIcon();
-</script>
-
-</body>
-</html>
 </script>
 
 </body>
