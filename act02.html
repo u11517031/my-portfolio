@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>活動 02：HTML 媒體元素實作 — 數位科技概論作業</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{sans:['Inter','Noto Sans TC','Noto Sans','system-ui','sans-serif']}}}};
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+html{scroll-behavior:smooth}
+body{font-family:'Inter','Noto Sans TC','Noto Sans',system-ui,sans-serif}
+.nav-blur{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.gradient-text{background:linear-gradient(90deg,#568fca,#6fa8dc);-webkit-background-clip:text;background-clip:text;color:transparent}
+.dark .gradient-text{background:linear-gradient(90deg,#a9cfee,#6fa8dc);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tech-tag{display:inline-block;padding:.3rem .6rem;border-radius:.4rem;background:#e2eef9;color:#568fca;font-size:.75rem;font-weight:700}
+.dark .tech-tag{background:#1d3449;color:#a9cfee}
+</style>
+</head>
+
+<body class="bg-slate-100 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
+
+<!-- 頂部導覽列 -->
+<nav class="fixed top-0 left-0 right-0 z-50 border-b border-slate-300/70 dark:border-slate-800/70 bg-slate-100/80 dark:bg-slate-950/80 nav-blur">
+<div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+<a href="intro-tech-assignments.html" class="text-sm font-bold tracking-tight hover:text-[#6fa8dc] transition flex items-center gap-2">
+<span>←</span> 返回作業列表
+</a>
+<div class="flex items-center gap-4">
+<span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-[#e8f2fb] dark:bg-[#172b3d] text-[#568fca] dark:text-[#a9cfee]">活動 02</span>
+<button id="themeToggle" aria-label="切換深色模式" class="w-8 h-8 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-800 transition"><span id="themeIcon">☾</span></button>
+</div>
+</div>
+</nav>
+
+<!-- 主要內容區 -->
+<main class="flex-grow max-w-5xl mx-auto px-6 pt-28 pb-16 w-full">
+  
+  <header class="mb-12 border-b border-slate-300 dark:border-slate-800 pb-8">
+    <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#568fca] dark:text-[#a9cfee] mb-2">
+      <span>Digital Tech Assignments</span> · <span>HTML Media</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">活動 02：HTML 媒體元素實作</h1>
+    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed max-w-3xl">
+      本練習示範如何在網頁中嵌入多媒體素材，包含 JPG/PNG 圖片、透明背景 PNG、向量圖形 (SVG)，以及 HTML5 的音訊與影片控制元件。
+    </p>
+    <div class="flex flex-wrap gap-2 mt-6">
+      <span class="tech-tag">HTML5 &lt;img&gt;</span>
+      <span class="tech-tag">透明 PNG</span>
+      <span class="tech-tag">SVG 向量圖</span>
+      <span class="tech-tag">HTML5 Audio</span>
+      <span class="tech-tag">HTML5 Video</span>
+    </div>
+  </header>
+
+  <!-- 成果預覽區 -->
+  <section class="mb-12">
+    <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+      <span class="w-2.5 h-2.5 rounded-full bg-[#6fa8dc]"></span>網頁渲染成果預覽
+    </h2>
+    
+    <div class="rounded-2xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-lg">
+      <div class="bg-slate-200/80 dark:bg-slate-800/80 px-4 py-3 border-b border-slate-300 dark:border-slate-700 flex items-center gap-2">
+        <div class="w-3 h-3 rounded-full bg-red-400"></div>
+        <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+        <div class="w-3 h-3 rounded-full bg-green-400"></div>
+        <span class="text-xs text-slate-500 dark:text-slate-400 ml-2 font-mono">act02.html</span>
+      </div>
+      
+      <div class="p-6 sm:p-10 space-y-8 text-slate-800 dark:text-slate-200">
+        
+        <div class="border-b border-slate-200 dark:border-slate-800 pb-4">
+          <h1 class="text-2xl font-bold mb-2">小小自然觀察站</h1>
+          <p class="text-slate-600 dark:text-slate-400">用圖片、聲音和影片，介紹一次觀察活動。</p>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="text-lg font-bold text-[#568fca] dark:text-[#a9cfee]">看一張圖片</h2>
+          <img src="media-02/flower-photo.png" alt="一朵粉紅色波斯菊與黃色花心的攝影風格 AI 生成圖片" width="300" class="rounded-lg max-w-full">
+          <p class="text-sm text-slate-600 dark:text-slate-400">這是攝影風格的 AI 生成花朵圖片，你注意到哪些部分？</p>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="text-lg font-bold text-[#568fca] dark:text-[#a9cfee]">換一張透明背景 PNG</h2>
+          <p class="text-sm text-slate-600 dark:text-slate-400">把下方圖片來源換成 media-02/flower-transparent.png，比較背景是否透出來。</p>
+          <div style="background-color: #dcebea; padding: 16px;" class="rounded-lg inline-block max-w-full">
+            <img src="media-02/flower-photo.png" alt="粉紅色花朵的攝影風格 AI 圖片" width="240" class="max-w-full">
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400">這裡預先提供淡色底板，只用來觀察透明效果；CSS 下一節再學。</p>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="text-lg font-bold text-[#568fca] dark:text-[#a9cfee]">船長的一週行事曆</h2>
+          <img src="media-02/captain-calendar.svg" alt="船長的一週行事曆，重點行程見下方文字" width="700" class="rounded-lg max-w-full border border-slate-200 dark:border-slate-800">
+          <p class="text-sm text-slate-600 dark:text-slate-400">教學用虛構行程：2026 年 9 月 14 日至 20 日。週一 10:00 啟航；週三 14:00 救生演練；週五 09:30 靠港補給；週日 10:00 返航。</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">完整行程：週一 08:30 航前簡報、10:00 離港啟航；週二 09:00 甲板巡檢、15:00 航海日誌；週三 07:30 海象觀測、14:00 救生演練；週四 10:00 燈塔定位、16:00 船員會議；週五 09:30 靠港補給、13:00 設備保養；週六 08:00 海岸探索、17:00 夕照攝影；週日 10:00 返航入港、15:30 下週規劃。</p>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="text-lg font-bold text-[#568fca] dark:text-[#a9cfee]">聽一段提示音</h2>
+          <audio src="media-02/notice.wav" controls class="max-w-full"></audio>
+          <p class="text-sm text-slate-600 dark:text-slate-400">聲音說明：三個由低到高的短音，提醒我們開始觀察。這是合成提示音，不是自然環境錄音。</p>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="text-lg font-bold text-[#568fca] dark:text-[#a9cfee]">看一段影片</h2>
+          <video src="media-02/flower.mp4" controls width="300" class="rounded-lg max-w-full bg-black"></video>
+          <p class="text-sm text-slate-600 dark:text-slate-400">影片內容說明：花朵隨風擺動的短片。請觀察花朵的移動。</p>
+        </div>
+
+        <div class="pt-4 border-t border-slate-200 dark:border-slate-800 space-y-2 text-xs text-slate-500 dark:text-slate-400">
+          <h2 class="font-bold text-slate-700 dark:text-slate-300">素材來源</h2>
+          <p>花朵、葉片與透明花朵 PNG 由 AI 生成；行事曆 SVG 與提示音為本課製作的練習素材。影片採用 MDN 的 flower.mp4 示範檔。</p>
+          <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video" target="_blank" rel="noopener noreferrer" class="text-[#568fca] dark:text-[#a9cfee] hover:underline">查看 MDN 影片範例說明 ↗</a></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 上下一頁按鈕 -->
+  <div class="flex justify-between items-center border-t border-slate-300 dark:border-slate-800 pt-8 mt-12">
+    <a href="act01.html" class="inline-flex items-center text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-[#568fca] dark:hover:text-[#a9cfee] transition">
+      ← 上一個活動：活動 01
+    </a>
+    <a href="act03.html" class="inline-flex items-center text-sm font-semibold text-[#568fca] dark:text-[#a9cfee] hover:underline transition">
+      下一個活動：活動 03 →
+    </a>
+  </div>
+
+</main>
+
+<footer class="border-t border-slate-300 dark:border-slate-800 py-8 bg-slate-100 dark:bg-slate-950 mt-auto">
+<div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row justify-between gap-4 text-sm text-slate-400">
+<p>© 2026 YOUR NAME. 數位科技概論課程作業</p>
+<p>用好奇心與程式碼打造。</p>
+</div>
+</footer>
+
+<script>
+const themeToggle=document.getElementById('themeToggle'),themeIcon=document.getElementById('themeIcon');
+function updateThemeIcon(){themeIcon.textContent=document.documentElement.classList.contains('dark')?'☀':'☾'}
+function toggleTheme(){document.documentElement.classList.toggle('dark');const isDark=document.documentElement.classList.contains('dark');localStorage.setItem('theme',isDark?'dark':'light');updateThemeIcon()}
+themeToggle.addEventListener('click',toggleTheme);
+if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark');
+updateThemeIcon();
+</script>
+
+</body>
+</html>
