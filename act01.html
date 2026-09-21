@@ -1,132 +1,128 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>暐茹的學習小站 — 獨立展示頁</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: { extend: { fontFamily: { sans: ['Inter', 'Noto Sans TC', 'sans-serif'] } } }
-        };
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>活動 01：文字層級與標籤 — 數位科技概論作業</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{sans:['Inter','Noto Sans TC','sans-serif']}}}};
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{font-family:'Inter','Noto Sans TC',sans-serif}
+.nav-blur{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.tech-tag{display:inline-block;padding:.3rem .6rem;border-radius:.4rem;background:#e2eef9;color:#568fca;font-size:.75rem;font-weight:700}
+.dark .tech-tag{background:#1d3449;color:#a9cfee}
+</style>
 </head>
-<body class="bg-slate-100 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen py-12 px-6 transition-colors duration-300">
 
-    <div class="max-w-3xl mx-auto bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 rounded-2xl p-8 shadow-sm">
-        
-        <!-- 頂部返回連結 -->
-        <div class="mb-6">
-            <a href="intro-tech-assignments.html" class="text-sm font-bold text-[#568fca] hover:underline inline-flex items-center gap-1">
-                ← 返回作業集總覽
-            </a>
-        </div>
+<body class="bg-slate-100 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
 
-        <!-- 主標題區塊 -->
-        <div class="border-b border-slate-200 dark:border-slate-800 pb-6 mb-6">
-            <span class="inline-block bg-slate-200 dark:bg-slate-800 text-xs font-bold px-2.5 py-1 rounded-md mb-2">個人學習網頁</span>
-            <h1 class="text-3xl font-extrabold tracking-tight">暐茹的學習小站</h1>
-            <p class="text-slate-600 dark:text-slate-300 mt-2 text-base">你好，我是暐茹。我喜歡畫畫，也喜歡探索新工具。</p>
-        </div>
+<!-- 頂部導覽列 -->
+<nav class="fixed top-0 left-0 right-0 z-50 border-b border-slate-300/70 dark:border-slate-800/70 bg-slate-100/80 dark:bg-slate-950/80 nav-blur">
+<div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+<a href="intro-tech-assignments.html" class="text-sm font-bold tracking-tight hover:text-[#6fa8dc] transition flex items-center gap-2">
+<span>←</span> 返回作業列表
+</a>
+<div class="flex items-center gap-4">
+<span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-[#e8f2fb] dark:bg-[#172b3d] text-[#568fca] dark:text-[#a9cfee]">活動 01</span>
+<button id="themeToggle" aria-label="切換深色模式" class="w-8 h-8 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-800 transition"><span id="themeIcon">☾</span></button>
+</div>
+</div>
+</nav>
 
-        <!-- 主要內容區塊 -->
-        <article class="space-y-8 leading-relaxed">
-            
-            <!-- 一、學習興趣與目標 -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                    <span class="w-2 h-5 bg-[#568fca] rounded-full inline-block"></span>
-                    我的學習興趣
-                </h2>
-                <p class="text-slate-700 dark:text-slate-300">
-                    我想用 <b class="text-blue-600 dark:text-blue-400">數位設計</b>，把學習變得更有趣。
-                </p>
-                
-                <div class="p-4 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 mt-3">
-                    <h3 class="text-md font-semibold text-slate-700 dark:text-slate-300 mb-1">這學期想試試看</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400">
-                        我的第一個挑戰是：<i class="not-italic font-medium text-slate-800 dark:text-slate-200 bg-amber-100 dark:bg-amber-950/60 px-1.5 py-0.5 rounded">做一個介紹家鄉的網站</i>。
-                    </p>
-                </div>
-            </section>
-
-            <hr class="border-slate-200 dark:border-slate-800">
-
-            <!-- 二、我的知識小角落 -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                    <span class="w-2 h-5 bg-[#568fca] rounded-full inline-block"></span>
-                    我的知識小角落
-                </h2>
-                <ul class="list-disc list-inside space-y-1 text-slate-700 dark:text-slate-300">
-                    <li>水的化學式是 <b class="text-blue-600 dark:text-blue-400">H<sub>2</sub>O</b>。</li>
-                    <li>邊長 3 公分的正方形，面積是 <b>9 cm<sup>2</sup></b>。</li>
-                </ul>
-            </section>
-
-            <hr class="border-slate-200 dark:border-slate-800">
-
-            <!-- 三、水與生活活動 -->
-            <section class="space-y-4">
-                <div>
-                    <h2 class="text-xl font-bold text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                        <span class="w-2 h-5 bg-[#568fca] rounded-full inline-block"></span>
-                        水與生活：小小科學探索日
-                    </h2>
-                    <p class="text-slate-600 dark:text-slate-400 mt-1">一起從生活中的水，發現科學的有趣之處。</p>
-                </div>
-
-                <!-- 活動介紹 -->
-                <div class="bg-blue-50/50 dark:bg-blue-950/20 p-4 rounded-xl border border-blue-100 dark:border-blue-900/50">
-                    <h3 class="text-md font-semibold text-blue-900 dark:text-blue-300 mb-1">活動介紹</h3>
-                    <p class="text-sm text-blue-800 dark:text-blue-400">這次活動適合國小中年級學生，請帶著好奇心一起參加。</p>
-                </div>
-
-                <!-- 探索項目卡片網格 -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-                    <div class="p-4 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800">
-                        <h4 class="font-bold text-slate-800 dark:text-slate-200 mb-1">🔍 觀察水的樣子</h4>
-                        <p class="text-xs text-slate-500 dark:text-slate-400">看看不同容器中的水，試著說出你觀察到的變化。</p>
-                    </div>
-                    <div class="p-4 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800">
-                        <h4 class="font-bold text-slate-800 dark:text-slate-200 mb-1">🧪 認識水的名字</h4>
-                        <p class="text-xs text-slate-500 dark:text-slate-400">水的化學式是 H<sub>2</sub>O。</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 四、參加前小提醒 -->
-            <section class="p-4 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50 rounded-xl space-y-2">
-                <h2 class="text-lg font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5">
-                    ⚠️ 參加前的小提醒
-                </h2>
-                <ul class="space-y-1.5 text-sm text-amber-900 dark:text-amber-200 font-medium">
-                    <li class="flex items-start gap-2">
-                        <span class="select-none">•</span>
-                        <span>請自備水壺，並準備一本觀察筆記。</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <span class="select-none">•</span>
-                        <span>今天的探索口號是：先觀察，再提問！</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <span class="select-none">•</span>
-                        <span>我們將使用面積為 100 cm<sup>2</sup> 的方形觀察卡。</span>
-                    </li>
-                </ul>
-            </section>
-
-        </article>
-
-        <!-- 頁尾資訊 -->
-        <div class="mt-8 pt-4 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center text-xs text-slate-400">
-            <span>作業檔名：act01.html</span>
-            <a href="intro-tech-assignments.html" class="hover:underline">返回作業總覽</a>
-        </div>
-
+<!-- 主要內容區 -->
+<main class="flex-grow max-w-5xl mx-auto px-6 pt-28 pb-16 w-full">
+  
+  <header class="mb-12 border-b border-slate-300 dark:border-slate-800 pb-8">
+    <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#568fca] dark:text-[#a9cfee] mb-2">
+      <span>Digital Tech Assignments</span> · <span>HTML Basics</span>
     </div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">活動 01：文字層級與標籤</h1>
+    <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed max-w-3xl">
+      本頁面實作 HTML5 基礎文字排版標籤，包含標題層級 (&lt;h1&gt;~&lt;h3&gt;)、粗體 (&lt;b&gt;)、斜體 (&lt;i&gt;)、下標 (&lt;sub&gt;) 與上標 (&lt;sup&gt;)。
+    </p>
+    <div class="flex flex-wrap gap-2 mt-6">
+      <span class="tech-tag">&lt;h1&gt; ~ &lt;h3&gt; 標題</span>
+      <span class="tech-tag">&lt;p&gt; 段落</span>
+      <span class="tech-tag">&lt;b&gt; 粗體</span>
+      <span class="tech-tag">&lt;i&gt; 斜體</span>
+      <span class="tech-tag">&lt;sub&gt; 下標</span>
+      <span class="tech-tag">&lt;sup&gt; 上標</span>
+    </div>
+  </header>
+
+  <!-- 成果預覽區 -->
+  <section class="mb-12">
+    <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+      <span class="w-2.5 h-2.5 rounded-full bg-[#6fa8dc]"></span>網頁渲染成果預覽
+    </h2>
+    
+    <div class="rounded-2xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-lg">
+      <div class="bg-slate-200/80 dark:bg-slate-800/80 px-4 py-3 border-b border-slate-300 dark:border-slate-700 flex items-center gap-2">
+        <div class="w-3 h-3 rounded-full bg-red-400"></div>
+        <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+        <div class="w-3 h-3 rounded-full bg-green-400"></div>
+        <span class="text-xs text-slate-500 dark:text-slate-400 ml-2 font-mono">act01.html</span>
+      </div>
+      
+      <div class="p-6 sm:p-10 space-y-6 text-slate-800 dark:text-slate-200">
+        
+        <!-- 活動 01 文字內容 -->
+        <div>
+          <h1 class="text-3xl font-extrabold mb-3 text-slate-900 dark:text-slate-100">水與生活：小小科學探索日</h1>
+          <p class="text-slate-600 dark:text-slate-400 mb-6">一起從生活中的水，發現科學的有趣之處。</p>
+
+          <h2 class="text-xl font-bold mt-6 mb-2 text-[#568fca] dark:text-[#a9cfee]">活動介紹</h2>
+          <p class="mb-4">這次活動適合國小中年級學生，請帶著好奇心一起參加。</p>
+
+          <h3 class="text-lg font-bold mt-4 mb-2 text-slate-700 dark:text-slate-300">觀察水的樣子</h3>
+          <p class="mb-4">看看不同容器中的水，試著說出你觀察到的變化。</p>
+
+          <h2 class="text-xl font-bold mt-6 mb-2 text-[#568fca] dark:text-[#a9cfee]">認識水的名字</h2>
+          <p class="mb-4">水的化學式是 H<sub>2</sub>O。</p>
+
+          <h2 class="text-xl font-bold mt-6 mb-2 text-[#568fca] dark:text-[#a9cfee]">參加前的小提醒</h2>
+          <p class="mb-2">請自備水壺，並準備一本觀察筆記。</p>
+          <p class="mb-2">今天的探索口號是：<i>先觀察，再提問！</i></p>
+          <p class="mb-2">我們將使用面積為 100 cm<sup>2</sup> 的方形觀察卡。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 上下一頁按鈕 -->
+  <div class="flex justify-between items-center border-t border-slate-300 dark:border-slate-800 pt-8 mt-12">
+    <a href="intro-tech-assignments.html" class="inline-flex items-center text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-[#568fca] dark:hover:text-[#a9cfee] transition">
+      ← 返回作業列表
+    </a>
+    <a href="act02.html" class="inline-flex items-center text-sm font-semibold text-[#568fca] dark:text-[#a9cfee] hover:underline transition">
+      下一個活動：活動 02 →
+    </a>
+  </div>
+
+</main>
+
+<footer class="border-t border-slate-300 dark:border-slate-800 py-8 bg-slate-100 dark:bg-slate-950 mt-auto">
+<div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row justify-between gap-4 text-sm text-slate-400">
+<p>© 2026 YOUR NAME. 數位科技概論課程作業</p>
+<p>用好奇心與程式碼打造。</p>
+</div>
+</footer>
+
+<script>
+const themeToggle=document.getElementById('themeToggle'),themeIcon=document.getElementById('themeIcon');
+function updateThemeIcon(){themeIcon.textContent=document.documentElement.classList.contains('dark')?'☀':'☾'}
+function toggleTheme(){document.documentElement.classList.toggle('dark');const isDark=document.documentElement.classList.contains('dark');localStorage.setItem('theme',isDark?'dark':'light');updateThemeIcon()}
+themeToggle.addEventListener('click',toggleTheme);
+if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark');
+updateThemeIcon();
+</script>
 
 </body>
 </html>
